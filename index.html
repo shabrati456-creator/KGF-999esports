@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <meta name="google-site-verification" content="6hzTEkw4zx_ly0eb-NBGa7d4FPXgIp6TkGZI1dpfrNo" />
+<head>
+    <meta name="google-site-verification" content="6hzTEkw4zx_ly0eb-NBGa7d4FPXgIp6TkGZI1dpfrNo" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KGF999 E-Sports | Official</title>
     <style>
-        /* ✅ ORIGINAL KGF LOADER */
-        #loader {
-            position: fixed; width: 100%; height: 100%;
-            background: #0b0b0b; z-index: 9999; 
-            display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-        }
-        .spinner-container {
-            position: relative; width: 120px; height: 120px;
-            display: flex; justify-content: center; align-items: center;
-        }
-        .spinner {
-            position: absolute; width: 100%; height: 100%;
-            border: 4px solid rgba(255, 69, 0, 0.1); border-top: 4px solid #ff4500;
-            border-radius: 50%; animation: spin 1s linear infinite;
-        }
+        #loader { position: fixed; width: 100%; height: 100%; background: #0b0b0b; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .spinner-container { position: relative; width: 120px; height: 120px; display: flex; justify-content: center; align-items: center; }
+        .spinner { position: absolute; width: 100%; height: 100%; border: 4px solid rgba(255, 69, 0, 0.1); border-top: 4px solid #ff4500; border-radius: 50%; animation: spin 1s linear infinite; }
         .loader-logo-text { font-size: 28px; font-weight: 900; color: #ff4500; text-shadow: 0 0 10px rgba(255, 69, 0, 0.8); }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
@@ -29,10 +17,8 @@
         
         .container { padding: 15px; max-width: 500px; margin: auto; }
         
-        /* 📊 POINT TABLE */
         .rules-card { background: rgba(255, 69, 0, 0.1); border: 2px solid #ff4500; border-radius: 15px; padding: 15px; margin-bottom: 25px; }
         .rules-title { color: gold; font-weight: bold; text-align: center; margin-bottom: 10px; font-size: 18px; }
-        .point-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 10px; }
 
         .match-card { background: #1a1a1a; border-radius: 20px; padding: 18px; margin-bottom: 25px; border: 1px solid #333; }
         .prize-box { background: rgba(0, 255, 0, 0.05); border: 1px solid rgba(0, 255, 0, 0.3); border-radius: 12px; padding: 12px; margin: 10px 0; }
@@ -41,19 +27,19 @@
         input { width: 93%; padding: 12px; margin-top: 8px; border-radius: 10px; border: 1px solid #444; background: #222; color: white; outline: none; }
         .join-btn { background: linear-gradient(to right, #28a745, #218838); color: white; width: 100%; border: none; padding: 16px; border-radius: 12px; font-weight: bold; font-size: 18px; margin-top: 15px; cursor: pointer; }
 
-        /* 📱 BOTTOM MENU NAVIGATION */
         .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #111; border-top: 1px solid #333; display: flex; justify-content: space-around; padding: 12px 0; z-index: 1000; box-shadow: 0 -5px 15px rgba(0,0,0,0.5); }
         .nav-item { color: #888; text-decoration: none; text-align: center; font-size: 11px; font-weight: bold; transition: 0.3s; }
         .nav-item i { font-size: 20px; display: block; margin-bottom: 4px; }
         .nav-item.active { color: #ff4500; }
 
-        /* MODAL */
         .modal { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); }
         .modal-content { background: #fff; margin: 8% auto; padding: 20px; border-radius: 25px; width: 85%; max-width: 350px; text-align: center; color: #000; }
         .qr-frame { background: #f0f0f0; padding: 10px; border-radius: 15px; margin: 10px 0; }
         .qr-img { width: 220px; height: 220px; border-radius: 10px; }
         .direct-pay-btn { background: #5f259f; color: white; padding: 12px; display: block; text-decoration: none; border-radius: 10px; margin: 10px 0; font-weight: bold; font-size: 14px; }
         .ss-box { border: 2px dashed #ff4500; padding: 12px; border-radius: 12px; margin-top: 15px; background: #fff9f5; }
+
+        .map-info { font-size: 13px; color: #00ffcc; margin: 8px 0; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -66,16 +52,55 @@
 
 <div class="container">
     <div class="rules-card">
-        <div class="rules-title">📊 POINT TABLE & RULES</div>
-        <div class="point-grid">
-            <div style="color:#00ffcc;">🏆 SOLO BOOYAH: 1 win price  </div>
-            <div style="color:#ff4500;">💀 SQUAD per KILL: 1 PT</div>
-            <div style="color:#fff;">🥇 BOOYAH 1: 10 point</div>
-            <div style="color:#fff;">🥈 PER KILL 2: 1 point</div>
+        <div class="rules-title">📊 KGF999 E-SPORTS RULES</div>
+        
+        <div id="rules-summary" style="font-size: 13px; line-height: 1.5; color: #fff;">
+            <b>Quick Summary:</b><br>
+            • Bargunda (Duo/Squad): 6 matches → total points se Top 1/2/3 decide (prize full pool)<br>
+            • CS / Lone Wolf / Solo: Har match alag → sirf Booyah winner ko prize<br>
+            • Points: Booyah +10, Per Kill +1<br>
+            • Screenshot compulsory – bina SS ke group nahi milega
         </div>
-        <div style="font-size: 11px; color: #bbb; margin-top: 10px; text-align: center;">
-            Rule: Solo mein sirf Booyah winner ko prize milega. Squad/Duo mein per kill 1 point.
-            Booyah mein 10 POINT
+        
+        <p onclick="toggleFullRules()" style="color:#ff4500; font-weight:bold; text-align:center; margin-top:12px; cursor:pointer; font-size:14px;">
+            See Full Rules ↓
+        </p>
+        
+        <div id="full-rules" style="display:none; font-size: 13px; line-height: 1.5; color: #fff; margin-top:15px; border-top:1px solid #444; padding-top:10px;">
+            <b>1. Match Types aur Prize Ka Tarika</b><br>
+            • <b>Bargunda (Bermuda) Matches</b> (Duo aur Squad): Yeh total 6 matches honge. Sab matches ka <b>total points</b> count hoga. Jo player/team ke 6 matches ke baad sabse zyada points banayega, usko hi prize milega (Top 1 sabse bada, fir Top 2, Top 3).<br>
+            • <b>CS, Lone Wolf, aur Solo Matches</b>: Har match bilkul alag hai. Sirf us match mein <b>Booyah (1st place)</b> karne wale ko prize milega.<br><br>
+
+            <b>2. Point System (Sab matches mein same)</b><br>
+            • Booyah (1st place) karne pe: +10 points<br>
+            • Har kill pe: +1 point<br>
+            • Bargunda series mein sab 6 matches ke points add hote jayenge → final total points se Top 1/2/3 decide hoga.<br>
+            • CS/Lone Wolf/Solo mein points sirf us match ke liye (prize Booyah winner ko).<br><br>
+
+            <b>3. Prize Pool</b><br>
+            • Bargunda (Duo/Squad series): Full prize pool 6 matches ke total points ke basis pe Top 1, Top 2, Top 3 ko.<br>
+            • CS / Lone Wolf / Solo: Har match ka prize alag (sirf Booyah winner ko) – match card pe dekho.<br><br>
+
+            <b>4. Registration Kaise Kare (Important!)</b><br>
+            1. Match choose karo → Apna/Team ka name bharo.<br>
+            2. Entry fee UPI se pay karo.<br>
+            3. Payment ka screenshot <b>zaroor upload karo</b> (modal mein) – bina screenshot ke join nahi hoga.<br>
+            4. Screenshot upload hone ke baad hi registration confirm hoga.<br>
+            5. Main tujhe private WhatsApp group mein add kar dunga.<br>
+            6. Match se <b>15 minute pehle</b> group mein Room ID + Password bhej dunga.<br>
+            7. Group mein sirf registered players rahenge – bina payment ke entry nahi milegi.<br><br>
+
+            <b>5. Important Baatein</b><br>
+            • Fair play rakho – cheating pakde gaye to permanent ban + prize nahi milega.<br>
+            • Real name / in-game ID use karo.<br>
+            • Result aur winner list WhatsApp channel pe update honge.<br>
+            • Koi problem ho to Support button pe message kar dena.<br><br>
+
+            <b style="color:gold;">Sabse badi baat: Payment screenshot upload karna compulsory hai – warna group nahi milega!</b>
+            
+            <p onclick="toggleFullRules()" style="color:#ff4500; font-weight:bold; text-align:center; margin-top:12px; cursor:pointer; font-size:14px;">
+                Hide Full Rules ↑
+            </p>
         </div>
     </div>
 
@@ -102,7 +127,7 @@
         <p>Fee: <b style="color:red; font-size:22px;">₹<span id="feeLabel"></span></b></p>
         
         <div class="ss-box">
-            <p style="font-size:12px; margin:0 0 5px 0; font-weight:bold; color: #ff4500;">📸 Payment ka screenshot upload karein</p>
+            <p style="font-size:12px; margin:0 0 5px 0; font-weight:bold; color: #ff4500;">📸 Payment ka screenshot upload karein (compulsory!)</p>
             <input type="file" id="ssInput" accept="image/*" style="font-size:11px; width:100%;">
         </div>
 
@@ -114,47 +139,74 @@
 <script>
     window.onload = () => { setTimeout(() => { document.getElementById('loader').style.display = 'none'; }, 1500); };
 
-    const times = ["08:00 AM", "08:40 AM", "09:20 AM", "10:00 AM", "10:40 AM", "11:20 AM", "12:00 PM", "12:40 PM", "01:20 PM", "02:00 PM", "02:40 PM", "03:20 PM", "04:00 PM", "04:40 PM", "05:20 PM", "06:00 PM", "06:40 PM", "07:20 PM", "08:00 PM", "08:40 PM", "09:20 PM", "10:00 PM", "10:40 PM"];
-    const container = document.getElementById('matches-container');
-    let sFee, sTime, sMode, sIdx, sPCount;
-
-    times.forEach((time, i) => {
-        let mode = (i % 3 == 0) ? "SOLO" : (i % 3 == 1 ? "DUO" : "SQUAD");
-        let entry = (mode=="SOLO")?10 : (mode=="DUO"?20 : 40);
-        let pCount = (mode=="SQUAD")?4 : (mode=="DUO"?2 : 1);
-        
-        let prizeHtml = "";
-        if(mode=="SOLO") {
-            prizeHtml = `<div class="prize-row" style="color:gold;"><span>🥇 Winner (Only Booyah)</span> <span>₹40</span></div>`;
+    function toggleFullRules() {
+        var summary = document.getElementById('rules-summary');
+        var full = document.getElementById('full-rules');
+        if (full.style.display === "none") {
+            full.style.display = "block";
+            summary.style.display = "none";
         } else {
-            prizeHtml = `
-                <div class="prize-row" style="color:gold;"><span>🥇 1st Rank</span> <span>${mode=="DUO"?'₹50':'₹100'}</span></div>
-                <div class="prize-row" style="color:silver;"><span>🥈 2nd Rank</span> <span>${mode=="DUO"?'₹20':'₹40'}</span></div>
-                <div class="prize-row" style="color:#CD7F32;"><span>🥉 3rd Rank</span> <span>${mode=="DUO"?'₹10':'₹20'}</span></div>`;
+            full.style.display = "none";
+            summary.style.display = "block";
         }
+    }
 
+    const matches = [
+        { id: 9, title: "Bargunda Solo", shot: "", entry: 30, prize: "Winner: ₹500", players: 1, map: "Bargunda", mode: "SOLO" },
+        { id: 1, title: "Lone Wolf 1v1 Headshot", shot: "Headshot", entry: 20, prize: "Winner: ₹40", players: 1, map: "Lone Wolf", mode: "SOLO" },
+        { id: 2, title: "Lone Wolf 1v1 Body Shot", shot: "Body Shot", entry: 20, prize: "Winner: ₹40", players: 1, map: "Lone Wolf", mode: "SOLO" },
+        { id: 3, title: "CS 4v4 Headshot", shot: "Headshot", entry: 40, prize: "1st: ₹80", players: 4, map: "CS", mode: "SQUAD" },
+        { id: 4, title: "CS 4v4 Body Shot", shot: "Body Shot", entry: 30, prize: "1st: ₹60", players: 4, map: "CS", mode: "SQUAD" },
+        { id: 5, title: "Bargunda Solo", shot: "", entry: 10, prize: "Winner: ₹150", players: 1, map: "Bargunda", mode: "SOLO" },
+        { id: 6, title: "Bargunda Duo (2v2)", shot: "", entry: 20, prize: "1st: ₹250<br>2nd: ₹100<br>3rd: ₹50", players: 2, map: "Bargunda", mode: "DUO" },
+        { id: 7, title: "Bargunda Squad (4v4)", shot: "", entry: 50, prize: "1st: ₹350<br>2nd: ₹100<br>3rd: ₹50", players: 4, map: "Bargunda", mode: "SQUAD" },
+        { id: 8, title: "Lone Wolf 2v2 Headshot", shot: "Headshot", entry: 50, prize: "1st: ₹100", players: 2, map: "Lone Wolf", mode: "DUO" },
+        { id: 10, title: "Bargunda Squad (4v4)", shot: "", entry: 50, prize: "1st: ₹300<br>2nd: ₹100<br>3rd: ₹50", players: 4, map: "Bargunda", mode: "SQUAD" },
+        { id: 11, title: "CS 4v4 Body Shot", shot: "Body Shot", entry: 35, prize: "1st: ₹70", players: 4, map: "CS", mode: "SQUAD" },
+        { id: 12, title: "CS 4v4 Headshot", shot: "Headshot", entry: 60, prize: "1st: ₹120", players: 4, map: "CS", mode: "SQUAD" }
+    ];
+
+    const container = document.getElementById('matches-container');
+    let sFee, sTitle, sMode, sPlayers, sPrize, sIdx;
+
+    matches.forEach((match, i) => {
         let inputHtml = "";
-        if(mode=="SOLO") {
+        if (match.players === 1) {
             inputHtml = `<input type="text" id="p_${i}_1" placeholder="👤 ENTER YOUR NAME">`;
         } else {
             inputHtml = `<input type="text" id="team_${i}" placeholder="🏁 TEAM NAME" style="border-color: #ff4500;">`;
-            for(let j=1; j<=pCount; j++) { inputHtml += `<input type="text" id="p_${i}_${j}" placeholder="👤 Player ${j} Name">`; }
+            for (let j = 1; j <= match.players; j++) {
+                inputHtml += `<input type="text" id="p_${i}_${j}" placeholder="👤 Player ${j} Name">`;
+            }
         }
 
         container.innerHTML += `
             <div class="match-card">
-                <span style="color:#00ffcc; font-weight:bold;">⏰ ${time} | ${mode} MATCH</span>
-                <div class="prize-box">${prizeHtml}</div>
+                <span style="color:#00ffcc; font-weight:bold;">${match.title} ${match.shot ? `| ${match.shot}` : ""}</span>
+                <div class="map-info">Map: ${match.map}</div>
+                <div class="prize-box">${match.prize.split('<br>').map(line => `<div class="prize-row" style="color:gold;">${line}</div>`).join('')}</div>
                 ${inputHtml}
-                <button class="join-btn" onclick="openPay(${i}, ${pCount}, '${time}', '${mode}', ${entry})">JOIN NOW (₹${entry})</button>
+                <button class="join-btn" onclick="openPay(${i}, '${match.title}', '${match.mode}', ${match.players}, ${match.entry}, '${match.prize.replace(/'/g, "\\'")}')">JOIN NOW (₹${match.entry})</button>
             </div>`;
     });
 
-    function openPay(idx, count, time, mode, fee) {
-        if(mode !== "SOLO" && !document.getElementById(`team_${idx}`).value) { alert("Team Name bhariye!"); return; }
-        if(!document.getElementById(`p_${idx}_1`).value) { alert("Player Name bhariye!"); return; }
+    function openPay(idx, title, mode, count, fee, prize) {
+        if (mode !== "SOLO" && !document.getElementById(`team_${idx}`).value) {
+            alert("Team Name bhariye!");
+            return;
+        }
+        if (!document.getElementById(`p_${idx}_1`).value) {
+            alert("Player Name bhariye!");
+            return;
+        }
         
-        sFee = fee; sTime = time; sMode = mode; sIdx = idx; sPCount = count;
+        sFee = fee;
+        sTitle = title;
+        sMode = mode;
+        sPlayers = count;
+        sPrize = prize;
+        sIdx = idx;
+
         document.getElementById('feeLabel').innerText = fee;
         
         let upi = `upi://pay?pa=9229526129@ybl&pn=Md%20Shabrati%20Shaikh&am=${fee}&cu=INR`;
@@ -164,161 +216,30 @@
         document.getElementById('qrModal').style.display = "block";
     }
 
-    function closeModal() { document.getElementById('qrModal').style.display = "none"; }
+    function closeModal() {
+        document.getElementById('qrModal').style.display = "none";
+    }
 
     function sendWA() {
-        if(!document.getElementById('ssInput').files[0]) { alert("Bhai, Screenshot upload karo!"); return; }
+        if (!document.getElementById('ssInput').files[0]) {
+            alert("Bhai, Payment ka screenshot upload karna compulsory hai! Bina SS ke join nahi hoga.");
+            return;
+        }
         
-        // --- Added Player & Team Details ---
-        let teamName = (sMode !== "SOLO") ? document.getElementById(`team_${sIdx}`).value : "SOLO PLAYER";
-        let players = "";
-        for(let j=1; j<=sPCount; j++) {
-            let val = document.getElementById(`p_${sIdx}_${j}`).value;
-            if(val) players += `%0A- Player ${j}: ${val}`;
+        let teamName = (sMode !== "SOLO") ? document.getElementById(`team_${sIdx}`).value.trim() : "";
+        let playersList = "";
+        for (let j = 1; j <= sPlayers; j++) {
+            let val = document.getElementById(`p_${sIdx}_${j}`).value.trim();
+            if (val) playersList += (playersList ? ", " : "") + val;
         }
 
-        let text = `*--- KGF999 NEW ENTRY ---*%0A*Time:* ${sTime}%0A*Mode:* ${sMode}%0A*Team:* ${teamName}%0A*Players:* ${players}%0A*Entry:* ₹${sFee}%0A_Screenshot uploaded._`;
+        let playerOrTeam = (sMode === "SOLO") 
+            ? `Player: ${playersList || "N/A"}`
+            : `Team: ${teamName || "N/A"}\nPlayers: ${playersList || "N/A"}`;
+
+        let text = `*New Entry KGF999*%0AMatch: ${sTitle}%0A${playerOrTeam}%0AFee: ₹${sFee}%0ASS uploaded`;
         window.location.href = `https://wa.me/9229526129?text=${text}`;
     }
 </script>
 </body>
-</html>        .match-card { background: #1a1a1a; border-radius: 20px; padding: 18px; margin-bottom: 25px; border: 1px solid #333; }
-        .prize-box { background: rgba(0, 255, 0, 0.05); border: 1px solid rgba(0, 255, 0, 0.3); border-radius: 12px; padding: 12px; margin: 10px 0; }
-        .prize-row { display: flex; justify-content: space-between; font-weight: bold; font-size: 14px; margin: 2px 0; }
-
-        input { width: 93%; padding: 12px; margin-top: 8px; border-radius: 10px; border: 1px solid #444; background: #222; color: white; outline: none; }
-        .join-btn { background: linear-gradient(to right, #28a745, #218838); color: white; width: 100%; border: none; padding: 16px; border-radius: 12px; font-weight: bold; font-size: 18px; margin-top: 15px; cursor: pointer; }
-
-        /* 📱 BOTTOM MENU NAVIGATION */
-        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #111; border-top: 1px solid #333; display: flex; justify-content: space-around; padding: 12px 0; z-index: 1000; box-shadow: 0 -5px 15px rgba(0,0,0,0.5); }
-        .nav-item { color: #888; text-decoration: none; text-align: center; font-size: 11px; font-weight: bold; transition: 0.3s; }
-        .nav-item i { font-size: 20px; display: block; margin-bottom: 4px; }
-        .nav-item.active { color: #ff4500; }
-
-        /* MODAL */
-        .modal { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); }
-        .modal-content { background: #fff; margin: 8% auto; padding: 20px; border-radius: 25px; width: 85%; max-width: 350px; text-align: center; color: #000; }
-        .qr-frame { background: #f0f0f0; padding: 10px; border-radius: 15px; margin: 10px 0; }
-        .qr-img { width: 220px; height: 220px; border-radius: 10px; }
-        .direct-pay-btn { background: #5f259f; color: white; padding: 12px; display: block; text-decoration: none; border-radius: 10px; margin: 10px 0; font-weight: bold; font-size: 14px; }
-        .ss-box { border: 2px dashed #ff4500; padding: 12px; border-radius: 12px; margin-top: 15px; background: #fff9f5; }
-    </style>
-</head>
-<body>
-
-<div id="loader">
-    <div class="spinner-container"><div class="spinner"></div><div class="loader-logo-text">KGF</div></div>
-</div>
-
-<header>KGF999 E-SPORTS</header>
-
-<div class="container">
-    <div class="rules-card">
-        <div class="rules-title">📊 POINT TABLE & RULES</div>
-        <div class="point-grid">
-            <div style="color:#00ffcc;">🏆 SOLO BOOYAH: 1 win price  </div>
-            <div style="color:#ff4500;">💀 SQUAD per KILL: 1 PT</div>
-            <div style="color:#fff;">🥇 BOOYAH 1: 10 point</div>
-            <div style="color:#fff;">🥈 PER KILL 2: 1 point</div>
-        </div>
-        <div style="font-size: 11px; color: #bbb; margin-top: 10px; text-align: center;">
-            Rule: Solo mein sirf Booyah winner ko prize milega. Squad/Duo mein per kill 1 point.
-            Booyah mein 10 POINT
-        </div>
-    </div>
-
-    <div id="matches-container"></div>
-</div>
-
-<div class="bottom-nav">
-    <a href="#" class="nav-item active">🏠<br>Home</a>
-    <a href="https://wa.me/9229526129" class="nav-item">💬<br>Support</a>
-    <a href="https://youtube.com/@kgf999e-sports" class="nav-item">🎬<br>YouTube</a>
-    <a href="https://whatsapp.com/channel/0029VbCTbC4EVccJ99Dy4k2F-sports" class="nav-item">📊<br>Results</a>
-</div>
-
-<div id="qrModal" class="modal">
-    <div class="modal-content">
-        <h3 style="margin:0; color: #ff4500;">PAYMENT KAREIN</h3>
-        <div class="qr-frame">
-            <img id="qrImg" src="" class="qr-img">
-        </div>
-        
-        <a id="directLink" href="#" class="direct-pay-btn">CLICK TO PAY DIRECTLY</a>
-        
-        <p style="font-size: 13px; font-weight: bold; margin: 5px 0;">UPI ID: 9229526129@ybl</p>
-        <p>Fee: <b style="color:red; font-size:22px;">₹<span id="feeLabel"></span></b></p>
-        
-        <div class="ss-box">
-            <p style="font-size:12px; margin:0 0 5px 0; font-weight:bold; color: #ff4500;">📸 Payment ka screenshot upload karein</p>
-            <input type="file" id="ssInput" accept="image/*" style="font-size:11px; width:100%;">
-        </div>
-
-        <button onclick="sendWA()" style="background:#28a745; color:white; border:none; padding:15px; width:100%; border-radius:12px; font-weight:bold; margin-top:15px; cursor:pointer;">DONE / JOIN ✅</button>
-        <p onclick="closeModal()" style="color:red; cursor:pointer; font-weight:bold; margin-top:15px; font-size:12px;">[ CLOSE ]</p>
-    </div>
-</div>
-
-<script>
-    window.onload = () => { setTimeout(() => { document.getElementById('loader').style.display = 'none'; }, 1500); };
-
-    const times = ["08:00 AM", "08:40 AM", "09:20 AM", "10:00 AM", "10:40 AM", "11:20 AM", "12:00 PM", "12:40 PM", "01:20 PM", "02:00 PM", "02:40 PM", "03:20 PM", "04:00 PM", "04:40 PM", "05:20 PM", "06:00 PM", "06:40 PM", "07:20 PM", "08:00 PM", "08:40 PM", "09:20 PM", "10:00 PM", "10:40 PM"];
-    const container = document.getElementById('matches-container');
-    let sFee, sTime, sMode;
-
-    times.forEach((time, i) => {
-        let mode = (i % 3 == 0) ? "SOLO" : (i % 3 == 1 ? "DUO" : "SQUAD");
-        let entry = (mode=="SOLO")?10 : (mode=="DUO"?20 : 40);
-        let pCount = (mode=="SQUAD")?4 : (mode=="DUO"?2 : 1);
-        
-        let prizeHtml = "";
-        if(mode=="SOLO") {
-            prizeHtml = `<div class="prize-row" style="color:gold;"><span>🥇 Winner (Only Booyah)</span> <span>₹40</span></div>`;
-        } else {
-            prizeHtml = `
-                <div class="prize-row" style="color:gold;"><span>🥇 1st Rank</span> <span>${mode=="DUO"?'₹50':'₹100'}</span></div>
-                <div class="prize-row" style="color:silver;"><span>🥈 2nd Rank</span> <span>${mode=="DUO"?'₹20':'₹40'}</span></div>
-                <div class="prize-row" style="color:#CD7F32;"><span>🥉 3rd Rank</span> <span>${mode=="DUO"?'₹10':'₹20'}</span></div>`;
-        }
-
-        let inputHtml = "";
-        if(mode=="SOLO") {
-            inputHtml = `<input type="text" id="p_${i}_1" placeholder="👤 ENTER YOUR NAME">`;
-        } else {
-            inputHtml = `<input type="text" id="team_${i}" placeholder="🏁 TEAM NAME" style="border-color: #ff4500;">`;
-            for(let j=1; j<=pCount; j++) { inputHtml += `<input type="text" id="p_${i}_${j}" placeholder="👤 Player ${j} Name">`; }
-        }
-
-        container.innerHTML += `
-            <div class="match-card">
-                <span style="color:#00ffcc; font-weight:bold;">⏰ ${time} | ${mode} MATCH</span>
-                <div class="prize-box">${prizeHtml}</div>
-                ${inputHtml}
-                <button class="join-btn" onclick="openPay(${i}, ${pCount}, '${time}', '${mode}', ${entry})">JOIN NOW (₹${entry})</button>
-            </div>`;
-    });
-
-    function openPay(idx, count, time, mode, fee) {
-        if(mode !== "SOLO" && !document.getElementById(`team_${idx}`).value) { alert("Team Name bhariye!"); return; }
-        if(!document.getElementById(`p_${idx}_1`).value) { alert("Player Name bhariye!"); return; }
-        
-        sFee = fee; sTime = time; sMode = mode;
-        document.getElementById('feeLabel').innerText = fee;
-        
-        let upi = `upi://pay?pa=9229526129@ybl&pn=Md%20Shabrati%20Shaikh&am=${fee}&cu=INR`;
-        document.getElementById('qrImg').src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(upi)}`;
-        document.getElementById('directLink').href = upi;
-        
-        document.getElementById('qrModal').style.display = "block";
-    }
-
-    function closeModal() { document.getElementById('qrModal').style.display = "none"; }
-
-    function sendWA() {
-        if(!document.getElementById('ssInput').files[0]) { alert("Bhai, Screenshot upload karo!"); return; }
-        let text = `*--- KGF999 NEW ENTRY ---*%0A*Time:* ${sTime}%0A*Mode:* ${sMode}%0A*Entry:* ₹${sFee}%0A_Screenshot uploaded._`;
-        window.location.href = `https://wa.me/9229526129?text=${text}`;
-    }
-</script>
-</body>
-</html>
+            </html>
